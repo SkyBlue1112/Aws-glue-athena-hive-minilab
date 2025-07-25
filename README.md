@@ -1,19 +1,19 @@
-# Mini Lab AWS — Data Lake com Glue Crawler + Athena + Hive Partitions
+# AWS Mini Lab — Data Lake with Glue Crawler, Athena, and Hive-Style Partitions
 
-Este projeto demonstra a construção de um mini data lake no AWS S3 com partições Hive-style, usando AWS Glue Crawler para catalogação automática e Amazon Athena para consultas SQL.
-
----
-
-## 1. Objetivos
-
-- Criar um bucket S3 com estrutura particionada (`year=/month=/day=`)
-- Popular com arquivos CSV de teste
-- Automatizar a detecção de partições usando AWS Glue Crawler
-- Consultar os dados via Amazon Athena com particionamento dinâmico
+This project demonstrates how to set up a mini data lake on AWS using S3, Glue Crawler, and Amazon Athena, leveraging Hive-style partitioning for optimized query performance.
 
 ---
 
-## 2. Estrutura dos dados no S3
+## 1.Objectives
+
+- Set up a partitioned folder structure in Amazon S3
+- Ingest sample shipment data in CSV format
+- Use AWS Glue Crawler to automatically detect and catalog partitions
+- Query the data using Amazon Athena and validate partition recognition
+
+---
+
+## 2. S3 Data Layout
 
 ```bash
 s3://sophia-lake-lab-2025/shipment/
@@ -21,15 +21,13 @@ s3://sophia-lake-lab-2025/shipment/
 │   ├── month=07/
 │   │   ├── day=25/data1.csv
 │   │   └── day=26/data2.csv
-
 ```
 ---
 
-## 3. Serviços Utilizados
+## 3. AWS Services Used
 
-- Amazon S3 – Armazenamento de dados particionados
-- AWS Glue Crawler – Descoberta e catalogação automática de tabelas
-= AWS Glue Data Catalog – Metastore centralizado para Athena
-- Amazon Athena – Consultas SQL serverless
-
+- Amazon S3 – Storage for partitioned data
+- AWS Glue Crawler – Automated metadata discovery and cataloging
+- AWS Glue Data Catalog – Centralized metadata store for Athena
+- Amazon Athena – Serverless SQL engine to query data in S3
 ------
