@@ -1,0 +1,4 @@
+shipment_id,origin,destination,status
+1,SP,RJ,delivered
+2,RJ,MG,in_transit
+3,MG,BA,delayed
