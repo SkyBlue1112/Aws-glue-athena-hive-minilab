@@ -25,7 +25,7 @@ s3://sophia-lake-lab-2025/shipment/
 ```
 ---
 
-## 2. Serviços Utilizados
+## 3. Serviços Utilizados
 
 - Amazon S3 – Armazenamento de dados particionados
 - AWS Glue Crawler – Descoberta e catalogação automática de tabelas
